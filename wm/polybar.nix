@@ -1,0 +1,7 @@
+{
+  programs.polybar = {
+    enable = true;
+  };
+}
+
+
