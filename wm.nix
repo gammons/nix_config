@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    #./wm/i3.nix
+    ./wm/i3.nix
   ];
   home.packages = with pkgs; [
     # applications
@@ -16,11 +16,10 @@
     git
     curl
     wget
-  ];
 
-  xsession.enable = true;
-  xsession.windowManager.i3 = {
-    enable = true;
-    package = pkgs.i3-gaps;
-  };
+    # desktop env things
+    picom
+    xautolock
+    flameshot
+  ];
 }
