@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ./base/git.nix
     ./base/vim.nix
     ./base/fzf.nix
     ./base/tmux.nix
@@ -10,20 +11,14 @@
 
   home.packages = with pkgs; [
     gcc
-    git
     curl
     wget
     tig
     sudo
+    htop
     ag
     fd
     fzf
     exa
   ];
-
-  programs.git = {
-    enable = true;
-    userEmail = "gammons@gmail.com";
-    userName = "Grant Ammons";
-  };
 }
