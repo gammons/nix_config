@@ -12,6 +12,7 @@
       gdc="gd --cached";
       push="git push";
       gco = "git checkout";
+      gca = "git commit --all";
 
       l="exa --long --header -a -s modified";
     };

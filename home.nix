@@ -11,8 +11,8 @@
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "nixgrant";
-  home.homeDirectory = "/home/nixgrant";
+  home.username = "grant";
+  home.homeDirectory = "/home/grant";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -24,11 +24,14 @@
   # changes in each release.
   home.stateVersion = "21.11";
 
-
   home.keyboard = {
     layout = "us, us";
     options = [
       "caps:lctrl"
     ];
+  };
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
   };
 }

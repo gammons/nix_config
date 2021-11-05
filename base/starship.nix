@@ -1,17 +1,24 @@
+{ config, pkgs, lib, ... }:
+
 {
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
-    # Configuration written to ~/.config/starship.toml
+
     settings = {
       add_newline = false;
+
+      format = lib.concatStrings [
+        "$directory"
+        "$git_branch"
+        "$git_status"
+        "$character"
+      ];
 
       character = {
         success_symbol = "[➜](bold green)";
         error_symbol = "[➜](bold red)";
       };
-
-      # package.disabled = true;
     };
   };
 }

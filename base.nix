@@ -9,10 +9,21 @@
   ];
 
   home.packages = with pkgs; [
+    gcc
     git
     curl
     wget
     tig
     sudo
-  ]
+    ag
+    fd
+    fzf
+    exa
+  ];
+
+  programs.git = {
+    enable = true;
+    userEmail = "gammons@gmail.com";
+    userName = "Grant Ammons";
+  };
 }
