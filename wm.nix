@@ -21,5 +21,6 @@
     picom
     xautolock
     flameshot
+    brightnessctl
   ];
 }
