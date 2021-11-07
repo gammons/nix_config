@@ -41,8 +41,10 @@
   networking.useDHCP = false;
   networking.interfaces.enp57s0u1u2.useDHCP = true;
   networking.interfaces.wlp0s20f3.useDHCP = true;
-  networking.wireless.enable = true;
-  networking.wireless.interfaces = ["wlp2s0f3"];
+
+  networking.networkmanager.enable = true;
+  # networking.wireless.enable = true;
+  # networking.wireless.interfaces = ["wlp2s0f3"];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -56,7 +58,22 @@
   # };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+    xkbOptions = "ctrl:swapcaps";
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 35;
+    displayManager = {
+      defaultSession = "none+i3";
+      gdm = {
+        enable = true;
+      };
+    };
+    windowManager.i3.enable = true;
+  };
+
+  # enable kbconfig in console terminals outside of X
+  console.useXkbConfig = true;
 
   nixpkgs.config.allowUnfree = true;
 
@@ -84,6 +101,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    networkmanager
+    networkmanagerapplet
     zsh
     git
     vim

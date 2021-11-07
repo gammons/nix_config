@@ -20,13 +20,5 @@
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
     };
-
-    profileExtra = ''
-    . "/etc/profile.d/nix.sh"
-    '';
-
-    # NIX_PATH=/home/nixgrant/.nix-defexpr/channels:nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixpkgs:/nix/var/nix/profiles/per-user/root/channels
-    # NIX_PATH=nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixpkgs:/nix/var/nix/profiles/per-user/root/channels
   };
-
 }

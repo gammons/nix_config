@@ -9,6 +9,7 @@ in {
     config = {
       modifier = mod;
       fonts = ["pango:monospace 8"];
+      terminal = "kitty";
     };
   };
 }
