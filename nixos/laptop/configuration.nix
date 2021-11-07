@@ -25,7 +25,7 @@
   boot.initrd.luks.devices = {
     crypted = {
       preLVM = true;
-      device = "/dev/disk/by-uuid/1c39a063-5c13-4238-87fb-bb78f0e97819";
+      device = "/dev/disk/by-uuid/03dc3304-73b4-4871-9da3-1b0f760d8f36";
     };
   };
 
@@ -60,7 +60,7 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    xkbOptions = "ctrl:swapcaps";
+    xkbOptions = "caps:ctrl_modifier";
     autoRepeatDelay = 200;
     autoRepeatInterval = 35;
     displayManager = {
