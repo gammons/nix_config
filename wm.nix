@@ -2,6 +2,7 @@
 {
   imports = [
     ./wm/i3.nix
+    ./wm/rofi.nix
   ];
   home.packages = with pkgs; [
     # applications
@@ -19,6 +20,7 @@
 
     # desktop env things
     picom
+    polybar
     xautolock
     flameshot
     brightnessctl
