@@ -39,11 +39,11 @@
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.enp57s0u1u2.useDHCP = true;
-  networking.interfaces.wlp0s20f3.useDHCP = true;
+  #networking.interfaces.enp57s0u1u2.useDHCP = true;
+  networking.interfaces.wlp0s20f3.useDHCP = false;
 
   networking.networkmanager.enable = true;
-  # networking.wireless.enable = true;
+  networking.wireless.enable = false;
   # networking.wireless.interfaces = ["wlp2s0f3"];
 
   # Configure network proxy if necessary
@@ -67,6 +67,7 @@
       defaultSession = "none+i3";
       gdm = {
         enable = true;
+        wayland = false;
       };
     };
     windowManager.i3.enable = true;
