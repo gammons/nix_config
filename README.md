@@ -10,3 +10,4 @@ I am learning Nix / Nixos at the moment in a VM.  Maybe some day it will replace
 - remove wpa_supplicant
 - clean up the generated config files
 - figure out the issue with the setxkbmap options
+- ssh-agent
