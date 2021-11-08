@@ -2,12 +2,12 @@
 {
   imports = [
     ./wm/i3.nix
+    ./wm/kitty.nix
     ./wm/rofi.nix
   ];
   home.packages = with pkgs; [
     # applications
     playerctl
-    kitty
     slack
     google-chrome
     spotify
@@ -24,5 +24,6 @@
     xautolock
     flameshot
     brightnessctl
+    roboto-mono
   ];
 }
