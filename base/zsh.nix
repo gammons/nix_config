@@ -8,14 +8,17 @@
       lc = "cd ~/local_code";
 
       g = "git status";
+      gc = "git commit";
       gd = "git diff";
-      gdc="gd --cached";
-      push="git push";
+      gdc = "gd --cached";
       gco = "git checkout";
       gca = "git commit --all";
 
-      l="exa --long --header -a -s modified";
+      push = "git push";
+
+      l = "exa --long --header -a -s modified";
     };
+
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
