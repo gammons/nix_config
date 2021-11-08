@@ -12,6 +12,8 @@ in {
       modifier = "Mod1";
       terminal = "kitty";
 
+      focus.followMouse = false;
+
       gaps = {
         inner = 15;
         outer = 15;
@@ -24,8 +26,6 @@ in {
         "${modifier}+l" = "focus right";
 
         "${modifier}+f" = "fullscreen toggle";
-        #"${modifier}+Shift+Space" = "floating toggle";
-        "${modifier}+Space" = "focus mode_toggle";
       };
 
       startup = [
