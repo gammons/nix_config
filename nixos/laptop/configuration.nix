@@ -97,6 +97,7 @@
       disableWhileTyping = true;
       tapping = false;
       naturalScrolling = true;
+      clickMethod = "clickfinger";
     };
   };
 
