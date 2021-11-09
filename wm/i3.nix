@@ -26,6 +26,7 @@ in {
         "${modifier}+l" = "focus right";
 
         "${modifier}+f" = "fullscreen toggle";
+        "${modifier}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
       };
 
       startup = [
