@@ -7,7 +7,6 @@
   ];
   home.packages = with pkgs; [
     # applications
-    playerctl
     slack
     google-chrome
     spotify
@@ -19,11 +18,14 @@
     wget
 
     # desktop env things
+    playerctl
+    pasystray
     picom
     polybar
     xautolock
     flameshot
     brightnessctl
     roboto-mono
+    xfce.thunar
   ];
 }

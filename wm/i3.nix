@@ -48,6 +48,11 @@ in {
           notification = false;
         }
         {
+          command = "pasystray";
+          always = false;
+          notification = false;
+        }
+        {
           command = "setxkbmap -option caps:ctrl_modifier";
           always = false;
           notification = false;
