@@ -3,11 +3,9 @@ let
   mod = "Mod1";
   term = "kitty";
 in {
-  xsession.enable = true;
   xsession.windowManager.i3 = {
     enable = true;
     package = pkgs.i3-gaps;
-
 
     config = rec {
       modifier = "Mod1";
@@ -49,16 +47,6 @@ in {
         }
         {
           command = "pasystray";
-          always = false;
-          notification = false;
-        }
-        {
-          command = "setxkbmap -option caps:ctrl_modifier";
-          always = false;
-          notification = false;
-        }
-        {
-          command = "setxkbmap -option caps:ctrl_modifier";
           always = false;
           notification = false;
         }

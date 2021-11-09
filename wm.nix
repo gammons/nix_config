@@ -5,6 +5,15 @@
     ./wm/kitty.nix
     ./wm/rofi.nix
   ];
+
+  xsession.enable = true;
+
+  xsession.pointerCursor = {
+    package = pkgs.capitaine-cursors;
+    name = "capitaine-cursors";
+    size = 32;
+  };
+
   home.packages = with pkgs; [
     # applications
     slack
