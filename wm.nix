@@ -11,7 +11,7 @@
   xsession.pointerCursor = {
     package = pkgs.capitaine-cursors;
     name = "capitaine-cursors";
-    size = 32;
+    size = 48;
   };
 
   home.packages = with pkgs; [
