@@ -27,7 +27,7 @@
   home.keyboard = {
     layout = "us, us";
     options = [
-      "caps:lctrl"
+      "caps:ctrl_modifier"
     ];
   };
 
