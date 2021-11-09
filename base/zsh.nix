@@ -3,6 +3,7 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
+      c = "cal -3";
       vim = "nvim";
       dots = "cd ~/.config/nixpkgs";
       lc = "cd ~/local_code";
