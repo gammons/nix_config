@@ -79,12 +79,12 @@
 
   users.users.grant = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
   users.users."grant-work" = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
 
@@ -93,6 +93,7 @@
   environment.systemPackages = with pkgs; [
     networkmanager
     networkmanagerapplet
+    networkmanager-openconnect
     zsh
     git
     vim
