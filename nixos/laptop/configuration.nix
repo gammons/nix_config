@@ -82,6 +82,11 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
+  users.users."grant-work" = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

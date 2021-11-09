@@ -4,10 +4,15 @@ I am learning Nix / Nixos at the moment in a VM.  Maybe some day it will replace
 
 # TODO
 
-- libinput right click
-- i3 config
-- polybar config
-- remove wpa_supplicant
-- clean up the generated config files
-- figure out the issue with the setxkbmap options
-- ssh-agent
+- [x] libinput right click
+- [x] i3 config
+- [x] remove wpa-supplicant dhcp
+- [x] clean up the generated config files
+- [x] figure out the issue with the setxkbmap options
+- [x] kitty config
+- [x] X DPI
+- [ ] polybar config
+- [ ] ssh-agent
+- [ ] fonts?
+- [ ] tear free intel graphics
+- [ ] breeze icons
