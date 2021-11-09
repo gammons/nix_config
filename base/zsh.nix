@@ -4,7 +4,7 @@
     enable = true;
     shellAliases = {
       vim = "nvim";
-      dots = "cd ~/.dotfiles";
+      dots = "cd ~/.config/nixpkgs";
       lc = "cd ~/local_code";
 
       g = "git status";
