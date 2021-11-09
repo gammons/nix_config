@@ -43,7 +43,9 @@
 
   services.xserver = {
     enable = true;
-    xkbOptions = "caps:ctrl_modifier";
+
+    dpi = 150;
+
     autoRepeatDelay = 200;
     autoRepeatInterval = 35;
 
