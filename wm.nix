@@ -15,6 +15,8 @@
     size = 48;
   };
 
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     # applications
     slack
@@ -29,7 +31,9 @@
 
     # fonts
     roboto-mono
-    font-awesome
+    font-awesome-ttf
+    material-icons
+    weather-icons
 
     # desktop env things
     playerctl
