@@ -2,6 +2,7 @@
 {
   imports = [
     ./wm/i3.nix
+    ./wm/polybar.nix
     ./wm/kitty.nix
     ./wm/rofi.nix
   ];

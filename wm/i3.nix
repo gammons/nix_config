@@ -70,7 +70,6 @@ in {
       for_window [title="dropdown-terminal"] resize set 925 700
       for_window [title="dropdown-terminal"] move position center
       for_window [title="dropdown-terminal"] move scratchpad
-      for_window [title="Meet - "] sticky enable
       exec --no-startup-id ${term} --title=dropdown-terminal
     '';
   };
