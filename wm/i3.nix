@@ -11,6 +11,8 @@ in {
       modifier = "Mod1";
       terminal = term;
 
+      bars = [];
+
       focus.followMouse = false;
 
       gaps = {
@@ -48,6 +50,11 @@ in {
         {
           command = "pasystray";
           always = false;
+          notification = false;
+        }
+        {
+          command = "systemctl --user restart polybar.service";
+          always = true;
           notification = false;
         }
       ];
