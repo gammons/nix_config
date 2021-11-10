@@ -26,15 +26,17 @@
     curl
     wget
 
+    # fonts
+    roboto-mono
+    font-awesome
+
     # desktop env things
     playerctl
     pasystray
     picom
-    polybar
     xautolock
     flameshot
     brightnessctl
-    roboto-mono
     xfce.thunar
   ];
 }
