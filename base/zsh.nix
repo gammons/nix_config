@@ -16,6 +16,7 @@
       gca = "git commit --all";
 
       push = "git push";
+      pull = "git fetch && git rebase";
 
       l = "exa --long --header -a -s modified";
     };
