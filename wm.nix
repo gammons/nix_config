@@ -23,6 +23,7 @@
     google-chrome
     spotify
     obsidian
+    pavucontrol
 
     # tooling
     git
