@@ -11,8 +11,8 @@ I am learning Nix / Nixos at the moment in a VM.  Maybe some day it will replace
 - [x] figure out the issue with the setxkbmap options
 - [x] kitty config
 - [x] X DPI
+- [x] fonts?
+- [ ] tear free intel graphics
 - [ ] polybar config
 - [ ] ssh-agent
-- [ ] fonts?
-- [ ] tear free intel graphics
-- [ ] breeze icons
+- [x] breeze icons
