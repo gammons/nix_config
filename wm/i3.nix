@@ -78,6 +78,7 @@ in {
       for_window [title="dropdown-terminal"] move position center
       for_window [title="dropdown-terminal"] move scratchpad
       exec --no-startup-id ${term} --title=dropdown-terminal
+      exec --no-startup-id i3-msg workspace 1
     '';
   };
 }
