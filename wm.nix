@@ -4,6 +4,7 @@
     ./wm/i3.nix
     ./wm/picom.nix
     ./wm/polybar.nix
+    ./wm/dunst.nix
     ./wm/kitty.nix
     ./wm/rofi.nix
   ];
