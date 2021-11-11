@@ -57,6 +57,11 @@ in {
           always = true;
           notification = false;
         }
+        {
+          command = "systemctl --user restart dunst.service";
+          always = true;
+          notification = false;
+        }
       ];
     };
 
