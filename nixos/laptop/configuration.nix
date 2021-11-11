@@ -7,6 +7,10 @@
       ./hardware-configuration.nix
     ];
 
+  ####################################
+  # Boot config
+  ####################################
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -74,9 +78,16 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # Enable sound.
+  ####################################
+  # Sound
+  ####################################
+
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+
+  ####################################
+  # Users
+  ####################################
 
   users.users.grant = {
     isNormalUser = true;
@@ -89,8 +100,10 @@
     shell = pkgs.zsh;
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  ####################################
+  # System packages
+  ####################################
+
   environment.systemPackages = with pkgs; [
     networkmanager
     networkmanagerapplet
@@ -99,6 +112,23 @@
     git
     vim
   ];
+
+  ####################################
+  # Accelerated video playback
+  ####################################
+
+  nixpkgs.config.packageOverrides = pkgs: {
+    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+  };
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # LIBVA_DRIVER_NAME=iHD
+      vaapiIntel         # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
 
   system.stateVersion = "21.11";
 }
