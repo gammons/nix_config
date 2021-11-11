@@ -20,5 +20,6 @@
     fd
     fzf
     exa
+    jq
   ];
 }
