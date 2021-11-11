@@ -40,7 +40,7 @@
         tray-offset-y=1;
 
         modules-left = "i3";
-        modules-right = "backlight battery cpu volume date";
+        modules-right = "power_now backlight battery cpuhz cpu volume date";
       };
 
       "module/i3" = {
