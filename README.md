@@ -15,5 +15,5 @@ I am learning Nix / Nixos at the moment in a VM.  Maybe some day it will replace
 - [x] tear free intel graphics
 - [ ] polybar config
 - [ ] ssh-agent
-- [ ] tmux
+- [x] tmux
 - [x] breeze icons
