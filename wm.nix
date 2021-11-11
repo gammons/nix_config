@@ -39,6 +39,7 @@
 
     # desktop env things
     playerctl
+    keychain
     pasystray
     xautolock
     flameshot

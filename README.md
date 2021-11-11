@@ -14,6 +14,6 @@ My nix / nixos config for my daily driver machines.
 - [x] fonts?
 - [x] tear free intel graphics
 - [x] polybar config
-- [ ] ssh-agent / keychain
+- [x] ssh-agent / keychain
 - [x] tmux
 - [x] breeze icons

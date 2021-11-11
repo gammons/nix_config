@@ -21,6 +21,10 @@
       l = "exa --long --header -a -s modified";
     };
 
+    envExtra = ''
+      eval $(keychain --eval --quiet id_rsa)
+    '';
+
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
