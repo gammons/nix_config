@@ -1,6 +1,6 @@
 # Nix / Nixos config
 
-I am learning Nix / Nixos at the moment in a VM.  Maybe some day it will replace my laptop / desktop setup.
+My nix / nixos config for my daily driver machines.
 
 # TODO
 
@@ -13,7 +13,7 @@ I am learning Nix / Nixos at the moment in a VM.  Maybe some day it will replace
 - [x] X DPI
 - [x] fonts?
 - [x] tear free intel graphics
-- [ ] polybar config
+- [x] polybar config
 - [ ] ssh-agent
 - [x] tmux
 - [x] breeze icons
