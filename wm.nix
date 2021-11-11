@@ -44,5 +44,6 @@
     flameshot
     brightnessctl
     xfce.thunar
+    ruby
   ];
 }

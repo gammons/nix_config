@@ -40,7 +40,8 @@
         tray-offset-y=1;
 
         modules-left = "i3";
-        modules-right = "power_now backlight battery cpuhz cpu volume date";
+        modules-center = "weather";
+        modules-right = "power_now backlight battery cpuhz cpu volume whoami date";
       };
 
       "module/i3" = {
@@ -194,10 +195,17 @@
         exec = "~/.config/nixpkgs/wm/polybar/cpupower.sh";
       };
 
+      "module/weather" = {
+        type = "custom/script";
+        label = "%{T3}%output%";
+        interval = 200;
+        exec = "/run/current-system/sw/bin/nix-shell -p ruby --run ~/.config/nixpkgs/wm/polybar/polyweather.rb";
+      };
+
       "module/whoami" = {
         type = "custom/script";
         label = "%{T3}%output%";
-        exec = "whoami";
+        exec = "/run/current-system/sw/bin/whoami";
         format = " <label>";
       };
 
