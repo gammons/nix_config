@@ -2,6 +2,7 @@
 {
   imports = [
     ./wm/i3.nix
+    ./wm/picom.nix
     ./wm/polybar.nix
     ./wm/kitty.nix
     ./wm/rofi.nix
@@ -39,7 +40,6 @@
     # desktop env things
     playerctl
     pasystray
-    picom
     xautolock
     flameshot
     brightnessctl

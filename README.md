@@ -12,7 +12,8 @@ I am learning Nix / Nixos at the moment in a VM.  Maybe some day it will replace
 - [x] kitty config
 - [x] X DPI
 - [x] fonts?
-- [ ] tear free intel graphics
+- [x] tear free intel graphics
 - [ ] polybar config
 - [ ] ssh-agent
+- [ ] tmux
 - [x] breeze icons

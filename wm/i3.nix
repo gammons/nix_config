@@ -43,12 +43,12 @@ in {
           notification = false;
         }
         {
-          command = "picom -D 0 -b -i 1";
+          command = "pasystray";
           always = false;
           notification = false;
         }
         {
-          command = "pasystray";
+          command = "systemctl --user restart picom.service";
           always = false;
           notification = false;
         }
