@@ -7,6 +7,7 @@
     ./wm/dunst.nix
     ./wm/kitty.nix
     ./wm/rofi.nix
+    ./wm/xscreensaver.nix
   ];
 
   xsession.enable = true;
@@ -46,6 +47,5 @@
     flameshot
     brightnessctl
     xfce.thunar
-    ruby
   ];
 }

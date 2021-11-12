@@ -17,3 +17,10 @@ My nix / nixos config for my daily driver machines.
 - [x] ssh-agent / keychain
 - [x] tmux
 - [x] breeze icons
+
+- [ ] hooking up with desktop setup
+- [ ] libinput patch
+- [ ] screen locker / screensaver
+- [ ] sleep timer
+
+- [ ] thinkorswim

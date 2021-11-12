@@ -62,6 +62,11 @@ in {
           always = true;
           notification = false;
         }
+        {
+          command = "systemctl --user restart xscreensaver.service";
+          always = true;
+          notification = false;
+        }
       ];
     };
 
