@@ -20,7 +20,9 @@ My nix / nixos config for my daily driver machines.
 
 - [ ] hooking up with desktop setup
 - [ ] libinput patch
-- [ ] screen locker / screensaver
-- [ ] sleep timer
+- [x] screen locker / screensaver
+- [x] sleep timer
 
 - [ ] thinkorswim
+
+- [ ] autorandr

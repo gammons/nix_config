@@ -15,7 +15,12 @@
   xsession.pointerCursor = {
     package = pkgs.capitaine-cursors;
     name = "capitaine-cursors";
-    size = 48;
+    size = 36;
+  };
+
+  xresources.properties = {
+    "Xft.dpi" = 100; # desktop
+    # "Xft.dpi" = 150; # laptop
   };
 
   fonts.fontconfig.enable = true;
@@ -46,6 +51,7 @@
     xautolock
     flameshot
     brightnessctl
+    autorandr
     xfce.thunar
   ];
 }

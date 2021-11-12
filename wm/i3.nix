@@ -47,26 +47,6 @@ in {
           always = false;
           notification = false;
         }
-        {
-          command = "systemctl --user restart picom.service";
-          always = false;
-          notification = false;
-        }
-        {
-          command = "systemctl --user restart polybar.service";
-          always = true;
-          notification = false;
-        }
-        {
-          command = "systemctl --user restart dunst.service";
-          always = true;
-          notification = false;
-        }
-        {
-          command = "systemctl --user restart xscreensaver.service";
-          always = true;
-          notification = false;
-        }
       ];
     };
 

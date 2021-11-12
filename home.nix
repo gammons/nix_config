@@ -34,4 +34,12 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
+
+  lib.sytemd.user = {
+    startServices = true;
+
+    services = {
+      setxkbmap.Service.ExecStart = pkgs.lib.mkForce "${pkgs.coreutils}/bin/true";
+    };
+  };
 }
