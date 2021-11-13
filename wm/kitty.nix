@@ -3,7 +3,7 @@
     enable = true;
     font = {
       name = "Roboto Mono";
-      size = 18;
+      size = 12;
     };
 
     settings = {
