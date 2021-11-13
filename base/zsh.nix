@@ -5,8 +5,10 @@
     shellAliases = {
       c = "cal -3";
       vim = "nvim";
+
       dots = "cd ~/.config/nixpkgs";
       lc = "cd ~/local_code";
+      n = "cd ~/notes";
 
       g = "git status";
       gc = "git commit";
