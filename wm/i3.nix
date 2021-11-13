@@ -33,8 +33,8 @@ in {
         "${modifier}+F5" = "exec --no-startup-id playerctl play-pause";
         "${modifier}+F6" = "exec --no-startup-id playerctl next";
 
-        "${modifier}+F7" = "exec --no-startup-id ${pkgs.autorandr}/bin/autorandr --load mobile";
-        "${modifier}+F8" = "exec --no-startup-id ${pkgs.autorandr}/bin/autorandr --load docked";
+        "${modifier}+F7" = "exec --no-startup-id ~/.config/nixpkgs/bin/mobile.sh";
+        "${modifier}+F8" = "exec --no-startup-id ~/.config/nixpkgs/bin/dock.sh";
 
         "${modifier}+F11" = "exec --no-startup-id brightnessctl set 5%-";
         "${modifier}+F12" = "exec --no-startup-id brightnessctl set +5%";
