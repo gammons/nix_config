@@ -8,6 +8,7 @@
     ./wm/kitty.nix
     ./wm/rofi.nix
     ./wm/xscreensaver.nix
+    ./wm/dpi.nix
   ];
 
   xsession.enable = true;
@@ -53,5 +54,6 @@
     brightnessctl
     autorandr
     xfce.thunar
+    ruby # for a quick irb shell
   ];
 }
