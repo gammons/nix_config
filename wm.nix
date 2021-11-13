@@ -19,8 +19,8 @@
   };
 
   xresources.properties = {
-    "Xft.dpi" = 100; # desktop
-    # "Xft.dpi" = 150; # laptop
+    #"Xft.dpi" = 100; # desktop
+    "Xft.dpi" = 150; # laptop
   };
 
   fonts.fontconfig.enable = true;
