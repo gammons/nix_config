@@ -29,6 +29,13 @@ in {
         "${modifier}+f" = "fullscreen toggle";
         "${modifier}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
 
+        "${modifier}+F4" = "exec --no-startup-id playerctl previous";
+        "${modifier}+F5" = "exec --no-startup-id playerctl play-pause";
+        "${modifier}+F6" = "exec --no-startup-id playerctl next";
+
+        "${modifier}+F7" = "exec --no-startup-id ${pkgs.autorandr}/bin/autorandr --load mobile";
+        "${modifier}+F8" = "exec --no-startup-id ${pkgs.autorandr}/bin/autorandr --load docked";
+
         "${modifier}+F11" = "exec --no-startup-id brightnessctl set 5%-";
         "${modifier}+F12" = "exec --no-startup-id brightnessctl set +5%";
 
@@ -44,6 +51,11 @@ in {
         }
         {
           command = "pasystray";
+          always = false;
+          notification = false;
+        }
+        {
+          command = "systemctl --user restart polybar.service";
           always = false;
           notification = false;
         }
