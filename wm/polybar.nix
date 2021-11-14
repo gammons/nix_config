@@ -199,7 +199,7 @@
         type = "custom/script";
         label = "%{T3}%output%";
         interval = 200;
-        exec = "/run/current-system/sw/bin/nix-shell -p ruby --run ~/.config/nixpkgs/wm/polybar/polyweather.rb";
+        exec = "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/polybar/polyweather.rb";
       };
 
       "module/whoami" = {
