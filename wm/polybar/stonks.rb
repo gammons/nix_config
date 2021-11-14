@@ -1,7 +1,6 @@
 require 'net/http'
 require 'uri'
 require 'json'
-require 'byebug'
 
 # {"Global Quote"=>{"01. symbol"=>"TSLA", "02. open"=>"571.8900", "03. high"=>"583.9500", "04. low"=>"561.2500", "05. price"=>"581.5600", "06. volume"=>"11267493", "07. latest trading day"=>"2020-01-22", "08. previous close"=>"547.2000", "09. change"=>"34.3600", "10. change percent"=>"6.2792%"}}
 
