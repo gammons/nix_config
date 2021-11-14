@@ -130,6 +130,18 @@
     ];
   };
 
+  ####################################
+  # Libinput multiplier
+  ####################################
+
+  nixpkgs.overlays = [
+    (self: super: {
+     libinput = super.libinput.overrideAttrs (attrs: {
+       patches = (attrs.patches or []) ++ [ ./multiplier.patch ];
+     });
+    })
+  ];
+
   system.stateVersion = "21.11";
 }
 
