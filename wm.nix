@@ -4,7 +4,6 @@
     ./wm/i3.nix
     ./wm/picom.nix
     ./wm/polybar.nix
-    ./wm/dunst.nix
     ./wm/kitty.nix
     ./wm/rofi.nix
     ./wm/xscreensaver.nix
@@ -49,6 +48,7 @@
     flameshot
     brightnessctl
     autorandr
+    xfce.xfce4-notifyd
     xfce.thunar
     ruby # for a quick irb shell
   ];

@@ -55,6 +55,11 @@ in {
           notification = false;
         }
         {
+          command = "${pkgs.xfce.xfce4-notifyd}/usr/lib/xfce4/notifyd/xfce4-notifyd";
+          always = false;
+          notification = false;
+        }
+        {
           command = "systemctl --user restart polybar.service";
           always = false;
           notification = false;
