@@ -40,7 +40,7 @@
         tray-offset-y=1;
 
         modules-left = "i3";
-        modules-center = "weather";
+        modules-center = "weather docn_stonk";
         modules-right = "power_now backlight battery cpuhz cpu volume whoami date";
       };
 
@@ -187,6 +187,12 @@
         type = "custom/script";
         interval = 5;
         exec = "~/.config/nixpkgs/wm/polybar/power_now";
+      };
+
+      "module/docn_stonk" = {
+        type = "custom/script";
+        interval = 5;
+        exec = "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/polybar/stonks.rb DOCN";
       };
 
       "module/cpuhz" = {
