@@ -27,7 +27,7 @@ in {
         "${modifier}+l" = "focus right";
 
         "${modifier}+f" = "fullscreen toggle";
-        "${modifier}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
+        "${modifier}+p" = "exec ${pkgs.rofi}/bin/rofi -theme ${pkgs.rofi}/share/rofi/themes/android_notification.rasi -show run";
 
         "${modifier}+F4" = "exec --no-startup-id playerctl previous";
         "${modifier}+F5" = "exec --no-startup-id playerctl play-pause";
@@ -76,6 +76,7 @@ in {
       assign [class="Slack"] 2
       assign [class="Spotify"] 4
       for_window [title="dropdown-terminal"] floating enable
+      for_window [title="dropdown-terminal"] sticky enable
       for_window [title="dropdown-terminal"] resize set 925 700
       for_window [title="dropdown-terminal"] move position center
       for_window [title="dropdown-terminal"] move scratchpad
