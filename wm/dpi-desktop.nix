@@ -1,5 +1,5 @@
 {
   xresources.properties = {
-    "Xft.dpi" = 100; # desktop
+    "Xft.dpi" = 95; # desktop
   };
 }
