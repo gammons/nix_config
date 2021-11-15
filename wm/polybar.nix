@@ -191,7 +191,7 @@
 
       "module/docn_stonk" = {
         type = "custom/script";
-        interval = 5;
+        interval = 300;
         exec = "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/polybar/stonks.rb DOCN";
       };
 
