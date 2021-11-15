@@ -15,5 +15,6 @@ nixos-rebuild switch
 Then in user dir...
 
 ```
+cp -R config/* ~/.config/
 home-manager switch
 ```
