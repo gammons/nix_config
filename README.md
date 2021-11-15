@@ -2,27 +2,18 @@
 
 My nix / nixos config for my daily driver machines.
 
-# TODO
+# Usage
 
-- [x] libinput right click
-- [x] i3 config
-- [x] remove wpa-supplicant dhcp
-- [x] clean up the generated config files
-- [x] figure out the issue with the setxkbmap options
-- [x] kitty config
-- [x] X DPI
-- [x] fonts?
-- [x] tear free intel graphics
-- [x] polybar config
-- [x] ssh-agent / keychain
-- [x] tmux
-- [x] breeze icons
+At install time:
 
-- [ ] hooking up with desktop setup
-- [ ] libinput patch
-- [x] screen locker / screensaver
-- [x] sleep timer
+```
+rm -rf /etc/nixos/*.nix
+ln -s nixos/laptop/* /etc/nixos/
+nixos-rebuild switch
+```
 
-- [ ] thinkorswim
+Then in user dir...
 
-- [ ] autorandr
+```
+home-manager switch
+```
