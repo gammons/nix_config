@@ -28,6 +28,7 @@
     spotify
     obsidian
     pavucontrol
+    jdk11
 
     # tooling
     git
