@@ -75,11 +75,14 @@ in {
 
       assign [class="Slack"] 2
       assign [class="Spotify"] 4
+
       for_window [title="dropdown-terminal"] floating enable
       for_window [title="dropdown-terminal"] sticky enable
       for_window [title="dropdown-terminal"] resize set 925 700
       for_window [title="dropdown-terminal"] move position center
       for_window [title="dropdown-terminal"] move scratchpad
+
+      exec --no-startup-id xautolock -time 90 -locker "systemctl suspend" -corners "--00"
       exec --no-startup-id ${term} --title=dropdown-terminal
       exec --no-startup-id i3-msg workspace 1
     '';
