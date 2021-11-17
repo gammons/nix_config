@@ -3,6 +3,7 @@
     enable = true;
     settings = {
       lock = true;
+      fade = false;
       dpmsEnabled = true;
       dpmsQuickOff = false;
       timeout = "0:05:00";
