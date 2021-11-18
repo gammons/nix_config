@@ -46,6 +46,8 @@
   # X11
   ####################################
 
+  programs.sway.enable = true;
+
   services.xserver = {
     enable = true;
 
@@ -55,7 +57,7 @@
     autoRepeatInterval = 35;
 
     displayManager = {
-      defaultSession = "none+i3";
+      defaultSession = "sway";
       gdm = {
         enable = true;
         wayland = false;
@@ -73,7 +75,7 @@
       };
     };
 
-    windowManager.i3.enable = true;
+    #windowManager.i3.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;

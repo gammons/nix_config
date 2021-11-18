@@ -3,9 +3,6 @@
   services.redshift = {
     enable = true;
 
-    # package = pkgs.redshift-wlr;
-    #extraOptions = [ "-v" "-m" "wayland" ];
-
     temperature = {
       day = 6500;
       night = 4200;

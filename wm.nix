@@ -1,23 +1,14 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./wm/i3.nix
-    ./wm/picom.nix
-    ./wm/polybar.nix
+    ./wm/sway.nix
     ./wm/kitty.nix
-    ./wm/rofi.nix
-    ./wm/xscreensaver.nix
+    #./wm/polybar.nix
+    #./wm/rofi.nix
+    #./wm/xscreensaver.nix
     ./wm/redshift.nix
-    ./wm/dpi.nix
+    #./wm/dpi.nix
   ];
-
-  xsession.enable = true;
-
-  xsession.pointerCursor = {
-    package = pkgs.capitaine-cursors;
-    name = "capitaine-cursors";
-    size = 36;
-  };
 
   fonts.fontconfig.enable = true;
 
@@ -41,14 +32,23 @@
     material-icons
     weather-icons
 
+    # i3 / X things
+    # xautolock
+    # autorandr
+
+    # sway things
+    swaylock
+    swayidle
+    wl-clipboard
+    mako # notification daemon
+    wofi
+
     # desktop env things
     playerctl
     keychain
     pasystray
-    xautolock
     flameshot
     brightnessctl
-    autorandr
     xfce.xfce4-notifyd
     xfce.thunar
     ruby # for a quick irb shell
