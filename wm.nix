@@ -7,6 +7,7 @@
     ./wm/kitty.nix
     ./wm/rofi.nix
     ./wm/xscreensaver.nix
+    ./wm/redshift.nix
     ./wm/dpi.nix
   ];
 
