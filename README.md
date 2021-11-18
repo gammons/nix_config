@@ -18,3 +18,9 @@ Then in user dir...
 cp -R config/* ~/.config/
 home-manager switch
 ```
+
+## Sway TODO
+
+- [ ] monitor resolution on laptop
+- [ ] figure out better touchpad scrolling
+- [ ] bar
