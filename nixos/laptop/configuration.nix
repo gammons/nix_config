@@ -49,18 +49,20 @@
   services.xserver = {
     enable = true;
 
-    dpi = 150;
+    #dpi = 150;
 
     autoRepeatDelay = 200;
     autoRepeatInterval = 35;
 
     displayManager = {
-      defaultSession = "none+i3";
+      #defaultSession = "none+i3";
       gdm = {
         enable = true;
-        wayland = false;
+        wayland = true;
       };
     };
+
+    desktopManager.gnome.enable = true;
 
     libinput = {
       enable = true;
@@ -73,7 +75,7 @@
       };
     };
 
-    windowManager.i3.enable = true;
+    #windowManager.i3.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
