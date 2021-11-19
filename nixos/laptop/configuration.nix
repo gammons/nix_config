@@ -49,20 +49,21 @@
   programs.sway.enable = true;
 
   services.xserver = {
-    enable = true;
+    displayManager.startx.enable = true;
+    #enable = true;
 
-    dpi = 150;
+    #dpi = 150;
 
-    autoRepeatDelay = 200;
-    autoRepeatInterval = 35;
+    #autoRepeatDelay = 200;
+    #autoRepeatInterval = 35;
 
-    displayManager = {
-      defaultSession = "sway";
-      gdm = {
-        enable = true;
-        wayland = false;
-      };
-    };
+    #displayManager = {
+    #  defaultSession = "sway";
+    #  gdm = {
+    #    enable = true;
+    #    wayland = false;
+    #  };
+    #};
 
     libinput = {
       enable = true;

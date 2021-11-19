@@ -6,7 +6,7 @@ let
     exec = "${pkgs.google-chrome}/bin/google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland";
   };
   obsidianOzone = pkgs.makeDesktopItem {
-    name = "Obsidian";
+    name = "ObsidianOzone";
     desktopName = "Obsidian (Ozone Support)";
     exec = "${pkgs.obsidian}/bin/obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland";
   };
