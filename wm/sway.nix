@@ -37,31 +37,14 @@ in {
           middle_emulation = "enabled";
           click_method = "clickfinger";
         };
-        "DELL097D:00 04F3:311C Mouse" = {
-          natural_scroll = "enabled";
-          dwt = "enabled";
-          scroll_method  = "two_finger";
-          tap = "disabled";
-          scroll_factor = "1.0";
-          tap_button_map = "lrm";
-          middle_emulation = "enabled";
-          click_method = "clickfinger";
-        };
-        "ELAN29E2:00 04F3:29E2" = {
-          natural_scroll = "enabled";
-          dwt = "enabled";
-          scroll_method  = "two_finger";
-          tap = "disabled";
-          scroll_factor = "1.0";
-          tap_button_map = "lrm";
-          middle_emulation = "enabled";
-          click_method = "clickfinger";
+        "type:pointer" = {
+          scroll_factor = "3.0";
         };
       };
 
       output = {
         "eDP-1" = {
-          scale = "1.82";
+          scale = "1.72";
           pos = "0 0";
           res = "3840x2400";
         };
@@ -84,7 +67,7 @@ in {
         "${modifier}+l" = "focus right";
 
         "${modifier}+f" = "fullscreen toggle";
-        "${modifier}+p" = "exec ${pkgs.rofi}/bin/rofi -theme ${pkgs.rofi}/share/rofi/themes/android_notification.rasi -show run";
+        "${modifier}+p" = "exec ${pkgs.wofi}/bin/wofi --show run ";
 
         "${modifier}+F4" = "exec --no-startup-id playerctl previous";
         "${modifier}+F5" = "exec --no-startup-id playerctl play-pause";
