@@ -10,6 +10,11 @@ let
     desktopName = "Obsidian (Ozone Support)";
     exec = "${pkgs.obsidian}/bin/obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland";
   };
+  slackOzone = pkgs.makeDesktopItem {
+    name = "SlackOzone";
+    desktopName = "Slack (Ozone Support)";
+    exec = "${pkgs.slack}/bin/slack --enable-features=UseOzonePlatform --ozone-platform=wayland";
+  };
 
 in {
   imports = [
@@ -28,6 +33,7 @@ in {
   home.packages = with pkgs; [
     # applications
     slack
+    slackOzone
     google-chrome
     googleChromeOzone
     spotify
@@ -64,7 +70,7 @@ in {
     pasystray
     flameshot
     brightnessctl
-    xfce.xfce4-notifyd
+    #xfce.xfce4-notifyd
     xfce.thunar
     ruby # for a quick irb shell
   ];

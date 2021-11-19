@@ -21,5 +21,6 @@
     fzf
     exa
     jq
+    killall
   ];
 }

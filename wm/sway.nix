@@ -92,6 +92,10 @@ in {
           command = "pasystray";
           always = false;
         }
+        {
+          command = "mako";
+          always = false;
+        }
       ];
     };
 
