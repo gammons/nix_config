@@ -1,15 +1,3 @@
-diff --git a/src/evdev.c b/src/evdev.c
-index f332bc1..0dbb4e0 100644
---- a/src/evdev.c
-+++ b/src/evdev.c
-@@ -1369,6 +1369,7 @@ evdev_read_wheel_click_props(struct evdev_device *device)
- 	} else {
- 		angles.x = angles.y;
- 	}
-+	angles.y = 361;
- 
- 	return angles;
- }
 diff --git a/src/libinput.c b/src/libinput.c
 index a0c8504..112f96d 100644
 --- a/src/libinput.c
