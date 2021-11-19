@@ -64,6 +64,11 @@ in {
     mako # notification daemon
     wofi
 
+    gtk-engine-murrine
+    gtk_engines
+    gsettings-desktop-schemas
+    lxappearance
+
     # desktop env things
     playerctl
     keychain

@@ -6,16 +6,17 @@ in {
   wayland.windowManager.sway = {
     enable = true;
     package = pkgs.i3-gaps;
+    wrapperFeatures.gtk = true;
 
     config = rec {
       modifier = "Mod1";
       terminal = term;
 
       bars = [{
-        statusCommand = "${pkgs.i3status}/bin/i3status";
+        statusCommand = "~/.config/nixpkgs/bin/waybar.sh";
         command = "${pkgs.sway}/bin/swaybar";
         position = "top";
-        trayOutput = "*";
+        trayOutput = "primary";
 
       }];
 
@@ -85,12 +86,8 @@ in {
 
       startup = [
         {
-          command = "nm-applet";
-          always = false;
-        }
-        {
-          command = "pasystray";
-          always = false;
+          command = "nm-applet --indicator";
+          always = true;
         }
         {
           command = "mako";
@@ -119,7 +116,6 @@ in {
       for_window [title="dropdown-terminal"] move position center
       for_window [title="dropdown-terminal"] move scratchpad
 
-      exec --no-startup-id xautolock -time 90 -locker "systemctl suspend" -corners "--00"
       exec --no-startup-id ${term} --title=dropdown-terminal
       exec --no-startup-id i3-msg workspace 1
     '';
