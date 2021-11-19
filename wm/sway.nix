@@ -67,7 +67,7 @@ in {
         "${modifier}+l" = "focus right";
 
         "${modifier}+f" = "fullscreen toggle";
-        "${modifier}+p" = "exec ${pkgs.wofi}/bin/wofi --show run ";
+        "${modifier}+p" = "exec ${pkgs.wofi}/bin/wofi --show drun ";
 
         "${modifier}+F4" = "exec --no-startup-id playerctl previous";
         "${modifier}+F5" = "exec --no-startup-id playerctl play-pause";

@@ -1,5 +1,17 @@
 { config, pkgs, ... }:
-{
+let
+  googleChromeOzone = pkgs.makeDesktopItem {
+    name = "Chrome";
+    desktopName = "Google Chrome (Ozone Support)";
+    exec = "${pkgs.google-chrome}/bin/google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland";
+  };
+  obsidianOzone = pkgs.makeDesktopItem {
+    name = "Obsidian";
+    desktopName = "Obsidian (Ozone Support)";
+    exec = "${pkgs.obsidian}/bin/obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland";
+  };
+
+in {
   imports = [
     ./wm/sway.nix
     ./wm/kitty.nix
@@ -12,12 +24,15 @@
 
   fonts.fontconfig.enable = true;
 
+
   home.packages = with pkgs; [
     # applications
     slack
     google-chrome
+    googleChromeOzone
     spotify
     obsidian
+    obsidianOzone
     pavucontrol
     jdk11
 
