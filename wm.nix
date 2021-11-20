@@ -64,6 +64,10 @@ in {
     mako # notification daemon
     wofi
 
+    # themes
+    gnome-themes-standard
+    gnome3.adwaita-icon-theme
+
     gtk-engine-murrine
     gtk_engines
     gsettings-desktop-schemas

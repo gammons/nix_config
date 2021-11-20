@@ -100,6 +100,8 @@ in {
       smart_gaps on
       hide_edge_borders both
 
+      seat seat0 xcursor_theme Adwaita
+
       bindsym --release F12 exec --no-startup-id flameshot gui
 
       for_window [class="zoom"] floating enable
