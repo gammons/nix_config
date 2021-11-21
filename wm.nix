@@ -58,6 +58,7 @@ in {
     # autorandr
 
     # sway things
+    waybar
     swaylock
     swayidle
     wl-clipboard
