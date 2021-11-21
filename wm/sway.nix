@@ -100,7 +100,7 @@ in {
       smart_gaps on
       hide_edge_borders both
 
-      seat seat0 xcursor_theme Adwaita 48
+      seat seat0 xcursor_theme Adwaita 24
 
       bindsym --release F12 exec --no-startup-id flameshot gui
 
