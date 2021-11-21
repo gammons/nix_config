@@ -98,7 +98,6 @@ in {
 
     extraConfig = ''
       smart_gaps on
-      hide_edge_borders both
 
       seat seat0 xcursor_theme Adwaita 24
 
