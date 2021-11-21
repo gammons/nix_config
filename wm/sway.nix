@@ -105,6 +105,8 @@ in {
 
       seat seat0 xcursor_theme Adwaita 24
 
+      hide_edge_borders smart
+
       bindsym --release F12 exec --no-startup-id flameshot gui
 
       for_window [class="zoom"] floating enable
