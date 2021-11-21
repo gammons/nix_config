@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 let
   googleChromeOzone = pkgs.makeDesktopItem {
     name = "Chrome";
@@ -23,6 +23,49 @@ in {
   ];
 
   fonts.fontconfig.enable = true;
+
+  home.sessionVariables = {
+    WLR_DRM_NO_MODIFIERS= 1;
+    WLR_NO_HARDWARE_CURSORS = 1;
+    GDK_BACKEND = "wayland";
+    GDK_DPI_SCALE = 1;
+    MOZ_ENABLE_WAYLAND = 1;
+    QT_QPA_PLATFORM = "wayland-egl";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
+    SDL_VIDEODRIVER = "wayland";
+    _JAVA_AWT_WM_NONREPARENTING = 1;
+  };
+
+  systemd.user.targets.sway-session = {
+    Unit = {
+      Description = "sway compositor session";
+      Documentation = [ "man:systemd.special(7)" ];
+      BindsTo = [ "graphical-session.target" ];
+      Wants = [ "graphical-session-pre.target" ];
+      After = [ "graphical-session-pre.target" ];
+    };
+  };
+
+  systemd.user.services.mako = {
+    Unit.PartOf = [ "sway-session.target" ];
+    Install.WantedBy = [ "sway-session.target" ];
+
+    Service = {
+      ExecStart = "${pkgs.mako}/bin/mako";
+      Restart = "on-failure";
+    };
+  };
+
+
+  services.gammastep = {
+    enable = true;
+    latitude = "40.06";
+    longitude = "-75.30";
+    temperature = {
+      day = 6500;
+      night = 3500;
+    };
+  };
 
   home.packages = with pkgs; [
     # applications
@@ -57,6 +100,7 @@ in {
     wl-clipboard
     mako # notification daemon
     wofi
+    wdisplays
 
     # themes
     gnome-themes-standard

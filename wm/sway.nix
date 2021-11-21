@@ -89,10 +89,10 @@ in {
           command = "nm-applet --indicator";
           always = true;
         }
-        {
-          command = "mako";
-          always = false;
-        }
+        #{
+        #  command = "mako";
+        #  always = false;
+        #}
         {
           command = "waybar -c ~/.config/nixpkgs/wm/waybar/config -s ~/.config/nixpkgs/wm/waybar/style.css";
           always = true;

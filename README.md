@@ -23,4 +23,11 @@ home-manager switch
 
 - [x] monitor resolution on laptop
 - [x] figure out better touchpad scrolling
-- [ ] bar
+- [x] bar
+- [x] tray icons
+- [ ] idle
+- [ ] screensaver
+- [ ] gammastep
+
+- [ ] waybar weather
+- [ ] waybar whoami
