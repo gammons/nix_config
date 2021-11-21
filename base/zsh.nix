@@ -25,6 +25,7 @@
 
     envExtra = ''
       PATH=$HOME/.config/nixpkgs/bin:$PATH
+      WLR_DRM_NO_MODIFIERS=1
       eval $(keychain --eval --quiet id_rsa)
     '';
 
