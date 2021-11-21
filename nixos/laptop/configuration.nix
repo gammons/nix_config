@@ -50,20 +50,6 @@
 
   services.xserver = {
     displayManager.startx.enable = true;
-    #enable = true;
-
-    #dpi = 150;
-
-    #autoRepeatDelay = 200;
-    #autoRepeatInterval = 35;
-
-    #displayManager = {
-    #  defaultSession = "sway";
-    #  gdm = {
-    #    enable = true;
-    #    wayland = false;
-    #  };
-    #};
 
     libinput = {
       enable = true;
@@ -75,8 +61,6 @@
         clickMethod = "clickfinger";
       };
     };
-
-    #windowManager.i3.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;

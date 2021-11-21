@@ -94,7 +94,7 @@ in {
           always = false;
         }
         {
-          command = "pkill waybar; waybar -c ~/.config/nixpkgs/wm/waybar/config -s ~/.config/nixpkgs/wm/waybar/style.css";
+          command = "waybar -c ~/.config/nixpkgs/wm/waybar/config -s ~/.config/nixpkgs/wm/waybar/style.css";
           always = true;
         }
       ];

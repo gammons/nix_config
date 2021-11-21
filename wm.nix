@@ -20,25 +20,22 @@ in {
   imports = [
     ./wm/sway.nix
     ./wm/kitty.nix
-    #./wm/polybar.nix
-    #./wm/rofi.nix
-    #./wm/xscreensaver.nix
-    ./wm/redshift.nix
-    #./wm/dpi.nix
   ];
 
   fonts.fontconfig.enable = true;
-
 
   home.packages = with pkgs; [
     # applications
     slack
     slackOzone
+
     google-chrome
     googleChromeOzone
-    spotify
+
     obsidian
     obsidianOzone
+
+    spotify
     pavucontrol
     jdk11
 
@@ -52,10 +49,6 @@ in {
     font-awesome-ttf
     material-icons
     weather-icons
-
-    # i3 / X things
-    # xautolock
-    # autorandr
 
     # sway things
     waybar
@@ -80,7 +73,6 @@ in {
     pasystray
     flameshot
     brightnessctl
-    #xfce.xfce4-notifyd
     xfce.thunar
     ruby # for a quick irb shell
   ];
