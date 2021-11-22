@@ -2,8 +2,8 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: Roboto Mono, Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
     min-height: 0;
 }
 
@@ -250,4 +250,8 @@ label:focus {
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
+}
+
+#custom-weather {
+  padding-right: 10px;
 }

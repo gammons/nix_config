@@ -3,7 +3,7 @@
     "spacing": 4, // Gaps between modules (4px)
 
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["custom/weather"],
+    "modules-center": ["custom/weather", "custom/stonk"],
     "modules-right": ["network", "cpu", "memory", "backlight", "battery", "battery#bat2", "clock", "tray"],
 
     "keyboard-state": {
@@ -111,9 +111,17 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/weather": {
+        "interval": 600,
         "format": "{icon} {}",
         "max-length": 40,
         "escape": true,
         "exec": "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/waybar/polyweather.rb"
+    },
+    "custom/stonk": {
+        "interval": 600,
+        "format": "{icon} {}",
+        "max-length": 40,
+        "escape": true,
+        "exec": "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/waybar/stonks.rb DOCN"
     }
 }
