@@ -88,6 +88,10 @@ in {
           command = "waybar -c ~/.config/nixpkgs/wm/waybar/config -s ~/.config/nixpkgs/wm/waybar/style.css";
           always = true;
         }
+        {
+          command = ''swayidle -w timeout 300 "swaylock --screenshots --indicator --grace 2 --fade-in 0.2 --effect-blur 7x5 --effect-vignette 0.5:0.5" timeout 600 "systemctl suspend"'';
+          always = false;
+        }
       ];
     };
 
