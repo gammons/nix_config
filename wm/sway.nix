@@ -77,6 +77,8 @@ in {
         "${modifier}+F11" = "exec --no-startup-id brightnessctl set 5%-";
         "${modifier}+F12" = "exec --no-startup-id brightnessctl set +5%";
 
+        "${modifier}+Shift+F12" = "exec --no-startup-id grim -g "$(slurp -d)" - | wl-copy";
+
         "${modifier}+u" = ''[title="dropdown-terminal"] scratchpad show; move position center'';
         "${modifier}+Shift+u" = ''exec --no-startup-id ${term} --title=dropdown-terminal'';
       };
@@ -103,8 +105,6 @@ in {
       seat seat0 xcursor_theme Adwaita 24
 
       hide_edge_borders smart
-
-      bindsym --release F12 exec --no-startup-id flameshot gui
 
       for_window [class="zoom"] floating enable
       for_window [class="zoom"] sticky enable

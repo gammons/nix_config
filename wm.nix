@@ -96,6 +96,8 @@ in {
     wofi
     wdisplays
     swaylock-effects
+    grim
+    slurp
 
     # themes
     gnome-themes-standard
