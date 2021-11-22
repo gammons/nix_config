@@ -8,7 +8,7 @@ let
   obsidianOzone = pkgs.makeDesktopItem {
     name = "ObsidianOzone";
     desktopName = "Obsidian (Ozone Support)";
-    exec = "${pkgs.obsidian}/bin/obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland";
+    exec = "${pkgs.obsidian}/bin/obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland --disable-gpu";
   };
   slackOzone = pkgs.makeDesktopItem {
     name = "SlackOzone";
