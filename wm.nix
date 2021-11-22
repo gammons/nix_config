@@ -82,11 +82,6 @@ in {
     pavucontrol
     jdk11
 
-    # tooling
-    git
-    curl
-    wget
-
     # fonts
     roboto-mono
     font-awesome-ttf
@@ -95,12 +90,12 @@ in {
 
     # sway things
     waybar
-    swaylock
     swayidle
     wl-clipboard
     mako # notification daemon
     wofi
     wdisplays
+    swaylock-effects
 
     # themes
     gnome-themes-standard
@@ -117,6 +112,7 @@ in {
     pasystray
     flameshot
     brightnessctl
+    gammastep
     xfce.thunar
     ruby # for a quick irb shell
   ];
