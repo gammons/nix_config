@@ -77,7 +77,7 @@ in {
         "${modifier}+F11" = "exec --no-startup-id brightnessctl set 5%-";
         "${modifier}+F12" = "exec --no-startup-id brightnessctl set +5%";
 
-        "${modifier}+Shift+F12" = "exec --no-startup-id grim -g "$(slurp -d)" - | wl-copy";
+        "${modifier}+Shift+F12" = ''exec --no-startup-id grim -g "$(slurp -d)" - | wl-copy'';
 
         "${modifier}+u" = ''[title="dropdown-terminal"] scratchpad show; move position center'';
         "${modifier}+Shift+u" = ''exec --no-startup-id ${term} --title=dropdown-terminal'';
