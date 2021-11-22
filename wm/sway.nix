@@ -64,6 +64,8 @@ in {
 
         "${modifier}+f" = "fullscreen toggle";
         "${modifier}+p" = "exec ${pkgs.wofi}/bin/wofi --show drun ";
+        "${modifier}+bracketleft" = "move workspace to output eDP-1";
+        "${modifier}+bracketright" = "move workspace to output DP-3";
 
         "${modifier}+F4" = "exec --no-startup-id playerctl previous";
         "${modifier}+F5" = "exec --no-startup-id playerctl play-pause";
