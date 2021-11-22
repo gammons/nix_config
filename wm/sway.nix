@@ -12,14 +12,6 @@ in {
       modifier = "Mod1";
       terminal = term;
 
-      bars = [{
-        #statusCommand = "i3blocks";
-        #command = "waybar";
-        #command = "\"${pkgs.waybar}/bin/waybar -s /home/grant/.config/nixpkgs/wm/waybar/style.css\"";
-        #position = "top";
-        #trayOutput = "primary";
-      }];
-
       focus.followMouse = false;
 
       input = {
@@ -89,10 +81,6 @@ in {
           command = "nm-applet --indicator";
           always = true;
         }
-        #{
-        #  command = "mako";
-        #  always = false;
-        #}
         {
           command = "waybar -c ~/.config/nixpkgs/wm/waybar/config -s ~/.config/nixpkgs/wm/waybar/style.css";
           always = true;
