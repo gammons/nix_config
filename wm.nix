@@ -111,8 +111,6 @@ in {
     # desktop env things
     playerctl
     keychain
-    pasystray
-    flameshot
     brightnessctl
     gammastep
     xfce.thunar
