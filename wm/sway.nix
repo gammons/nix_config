@@ -36,6 +36,9 @@ in {
       };
 
       output = {
+        "*" = {
+          bg = "~/.config/nixpkgs/wm/bg.jpg fill";
+        };
         "eDP-1" = {
           scale = "1.72";
           pos = "0 0";
