@@ -80,6 +80,7 @@ window#waybar.chromium {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
+    border-right: 1px solid #444;
     color: #ffffff;
 }
 
@@ -254,4 +255,5 @@ label:focus {
 
 #custom-weather {
   padding-right: 10px;
+  border-right: 1px solid #444;
 }
