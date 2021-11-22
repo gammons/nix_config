@@ -49,7 +49,10 @@
   programs.sway.enable = true;
 
   services.xserver = {
-    displayManager.startx.enable = true;
+    enable = true;
+    displayManager = {
+      defaultSession = "sway";
+    };
 
     libinput = {
       enable = true;
