@@ -20,6 +20,7 @@ in {
   imports = [
     ./wm/sway.nix
     ./wm/kitty.nix
+    ./wm/mako.nix
   ];
 
   fonts.fontconfig.enable = true;
@@ -92,7 +93,6 @@ in {
     waybar
     swayidle
     wl-clipboard
-    mako # notification daemon
     wofi
     wdisplays
     swaylock-effects
