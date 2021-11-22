@@ -52,7 +52,7 @@
     enable = true;
     displayManager = {
       defaultSession = "sway";
-      lightdm.enable = true;
+      sddm.enable = true;
     };
 
     libinput = {
