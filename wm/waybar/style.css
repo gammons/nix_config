@@ -253,7 +253,7 @@ label:focus {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#custom-weather {
+#custom-weather, #custom-power_now {
   padding-right: 10px;
   border-right: 1px solid #444;
 }

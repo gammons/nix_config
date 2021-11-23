@@ -4,7 +4,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/weather", "custom/stonk"],
-    "modules-right": ["network", "cpu", "memory", "backlight", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["cpu", "custom/power_now", "memory", "backlight", "battery", "battery#bat2", "clock", "tray"],
 
     "keyboard-state": {
         "numlock": true,
@@ -116,6 +116,13 @@
         "max-length": 40,
         "escape": true,
         "exec": "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/waybar/polyweather.rb"
+    },
+    "custom/power_now": {
+        "interval": 5,
+        "format": "{} ",
+        "max-length": 40,
+        "escape": true,
+        "exec": "~/.config/nixpkgs/wm/waybar/power_now"
     },
     "custom/stonk": {
         "interval": 600,
