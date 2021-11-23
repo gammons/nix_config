@@ -2,7 +2,8 @@
 let
   mod = "Mod1";
   term = "kitty";
-  lockCmd = "swaylock --screenshots --indicator --grace 2 --fade-in 0.2 --effect-blur 7x5 --effect-vignette 0.5:0.5";
+  lockCmd = "~/.config/nixpkgs/wm/swaylock/lock.sh";
+  sleepCmd = "~/.config/nixpkgs/wm/swaylock/sleep.sh";
 in {
   wayland.windowManager.sway = {
     enable = true;
@@ -94,7 +95,8 @@ in {
           always = true;
         }
         {
-          command = ''swayidle timeout 300 "${lockCmd}" timeout 600 "systemctl suspend -i" before-sleep "${lockCmd}"'';
+          #command = ''swayidle timeout 300 "${lockCmd}" timeout 600 "systemctl suspend -i" before-sleep "${lockCmd}"'';
+          command = ''swayidle timeout 15 "${lockCmd}" timeout 30 ${sleepCmd} before-sleep "${lockCmd}"'';
           always = false;
         }
       ];
