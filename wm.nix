@@ -36,10 +36,12 @@
     wget
 
     # fonts
+    font-manager
     roboto-mono
     font-awesome-ttf
     material-icons
     weather-icons
+    nerdfonts
 
     # desktop env things
     playerctl
