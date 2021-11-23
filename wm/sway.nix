@@ -95,8 +95,7 @@ in {
           always = true;
         }
         {
-          #command = ''swayidle timeout 300 "${lockCmd}" timeout 600 "systemctl suspend -i" before-sleep "${lockCmd}"'';
-          command = ''swayidle timeout 15 "${lockCmd}" timeout 30 ${sleepCmd} before-sleep "${lockCmd}"'';
+          command = ''swayidle timeout 300 "${lockCmd}" timeout 600 ${sleepCmd} before-sleep "${lockCmd}"'';
           always = false;
         }
       ];
