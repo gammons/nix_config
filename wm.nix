@@ -84,10 +84,12 @@ in {
     jdk11
 
     # fonts
+    font-manager
     roboto-mono
     font-awesome-ttf
     material-icons
     weather-icons
+    nerdfonts
 
     # sway things
     waybar
