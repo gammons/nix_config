@@ -22,5 +22,6 @@
     exa
     jq
     killall
+    unzip
   ];
 }
