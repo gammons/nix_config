@@ -39,7 +39,7 @@ in {
 
       output = {
         "*" = {
-          bg = "~/.config/nixpkgs/wm/bg.jpg fill";
+          bg = "~/.config/nixpkgs/wm/wallpapers/10-15-Day.jpg fill";
         };
         "eDP-1" = {
           scale = "1.72";
