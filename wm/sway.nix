@@ -95,7 +95,7 @@ in {
           always = true;
         }
         {
-          command = ''swayidle timeout 300 "${lockCmd}" timeout 600 ${sleepCmd} before-sleep "${lockCmd}"'';
+          command = ''swayidle timeout 300 "${lockCmd}" timeout 1800 ${sleepCmd} before-sleep "${lockCmd}"'';
           always = false;
         }
       ];
