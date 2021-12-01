@@ -42,7 +42,7 @@ in {
           bg = "~/.config/nixpkgs/wm/wallpapers/10-15-Day.jpg fill";
         };
         "eDP-1" = {
-          scale = "1.72";
+          scale = "1.65";
           pos = "0 0";
           res = "3840x2400";
         };
