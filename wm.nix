@@ -57,7 +57,6 @@ in {
     };
   };
 
-
   services.gammastep = {
     enable = true;
     latitude = "40.06";
@@ -65,6 +64,26 @@ in {
     temperature = {
       day = 6500;
       night = 3500;
+    };
+  };
+
+  home.keyboard = {
+    layout = "us, us";
+    options = [
+      "caps:ctrl_modifier"
+    ];
+  };
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    TERM = "xterm-256color";
+  };
+
+  lib.sytemd.user = {
+    startServices = true;
+
+    services = {
+      setxkbmap.Service.ExecStart = pkgs.lib.mkForce "${pkgs.coreutils}/bin/true";
     };
   };
 

@@ -4,6 +4,7 @@
   imports = [
     ./base.nix
     ./wm.nix
+    ./dev.nix
   ];
 
   # Let Home Manager install and manage itself.
@@ -23,24 +24,4 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "21.11";
-
-  home.keyboard = {
-    layout = "us, us";
-    options = [
-      "caps:ctrl_modifier"
-    ];
-  };
-
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    TERM = "xterm-256color";
-  };
-
-  lib.sytemd.user = {
-    startServices = true;
-
-    services = {
-      setxkbmap.Service.ExecStart = pkgs.lib.mkForce "${pkgs.coreutils}/bin/true";
-    };
-  };
 }
