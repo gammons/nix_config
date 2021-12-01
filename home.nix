@@ -4,7 +4,6 @@
   imports = [
     ./base.nix
     ./wm.nix
-    ./dev.nix
   ];
 
   # Let Home Manager install and manage itself.
