@@ -26,6 +26,7 @@
     envExtra = ''
       PATH=$HOME/.config/nixpkgs/bin:$PATH
       eval $(keychain --eval --quiet id_rsa)
+      eval "$(direnv hook zsh)"
     '';
 
     history = {
