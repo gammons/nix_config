@@ -23,5 +23,7 @@
     jq
     killall
     unzip
+    direnv
+    stdenv
   ];
 }
