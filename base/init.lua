@@ -133,6 +133,8 @@ map('', '<Leader>s', ":split <C-R>=expand(\"%:p:h\") . '/'<CR>")
 map('', '<Leader>r', ":TestFile<CR>")
 map('', '<Leader>a', ":TestSuite<CR>")
 map('', '<Leader>t', ":TestSuite<CR>")
+cmd("nnoremap Y Y")
+
 
 vim.api.nvim_set_keymap('', '<leader>n', "<cmd>NERDTreeToggle<cr>", {noremap = true, silent = false})
 vim.api.nvim_set_keymap('', '<leader>w', "<cmd>wq!<cr>", {noremap = true, silent = false})
