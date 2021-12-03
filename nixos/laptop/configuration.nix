@@ -52,7 +52,7 @@
     enable = true;
     displayManager = {
       defaultSession = "sway";
-      sddm.enable = true;
+      startx.enable = true;
     };
 
     libinput = {
@@ -107,10 +107,6 @@
   ####################################
   # Accelerated video playback
   ####################################
-
-  nixpkgs.config.packageOverrides = pkgs: {
-    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-  };
 
   hardware.opengl = {
     enable = true;
