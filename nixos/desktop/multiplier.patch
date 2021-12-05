@@ -1,0 +1,49 @@
+diff --git a/src/libinput.c b/src/libinput.c
+index a0c8504..112f96d 100644
+--- a/src/libinput.c
++++ b/src/libinput.c
+@@ -33,6 +33,9 @@
+ #include <sys/epoll.h>
+ #include <unistd.h>
+ #include <assert.h>
++#include <fcntl.h>
++#include <sys/mman.h>
++#include <sys/stat.h>
+ 
+ #include "libinput.h"
+ #include "libinput-private.h"
+@@ -747,6 +750,8 @@ libinput_event_pointer_get_axis_value(struct libinput_event_pointer *event,
+ 	return value;
+ }
+ 
++static int multiplier=4;
++
+ LIBINPUT_EXPORT double
+ libinput_event_pointer_get_axis_value_discrete(struct libinput_event_pointer *event,
+ 					       enum libinput_pointer_axis axis)
+@@ -764,10 +777,10 @@ libinput_event_pointer_get_axis_value_discrete(struct libinput_event_pointer *ev
+ 	} else {
+ 		switch (axis) {
+ 		case LIBINPUT_POINTER_AXIS_SCROLL_HORIZONTAL:
+-			value = event->discrete.x;
++			value = event->discrete.x * multiplier;
+ 			break;
+ 		case LIBINPUT_POINTER_AXIS_SCROLL_VERTICAL:
+-			value = event->discrete.y;
++			value = event->discrete.y * multiplier;
+ 			break;
+ 		}
+ 	}
+@@ -820,10 +833,10 @@ libinput_event_pointer_get_scroll_value_v120(struct libinput_event_pointer *even
+ 	} else {
+ 		switch (axis) {
+ 		case LIBINPUT_POINTER_AXIS_SCROLL_HORIZONTAL:
+-			value = event->v120.x;
++			value = event->v120.x * multiplier;
+ 			break;
+ 		case LIBINPUT_POINTER_AXIS_SCROLL_VERTICAL:
+-			value = event->v120.y;
++			value = event->v120.y * multiplier;
+ 			break;
+ 		}
+ 	}
