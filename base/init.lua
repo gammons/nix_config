@@ -27,7 +27,6 @@ require('packer').startup(function()
   -- tree sitter
   use 'nvim-treesitter/nvim-treesitter'
   use 'neovim/nvim-lspconfig'
-  use 'glepnir/lspsaga.nvim'
 
   -- telescope for finding things
   use 'nvim-lua/popup.nvim'
@@ -245,6 +244,3 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
-
-local saga = require 'lspsaga'
-saga.init_lsp_saga()
