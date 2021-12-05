@@ -69,7 +69,7 @@ in {
 
     extraConfig = ''
       smart_gaps on
-      hide_edge_borders both
+      hide_edge_borders smart
 
       bindsym --release F12 exec --no-startup-id flameshot gui
 
