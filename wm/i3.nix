@@ -89,6 +89,7 @@ in {
 
       exec --no-startup-id xautolock -time 90 -locker "systemctl suspend" -corners "--00"
       exec --no-startup-id ${term} --title=dropdown-terminal
+      exec --no-startup-id feh --bg-scale ~/.config/nixpkgs/wm/wallpapers
       exec --no-startup-id i3-msg workspace 1
     '';
   };

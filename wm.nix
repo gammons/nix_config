@@ -53,6 +53,7 @@
     autorandr
     xfce.xfce4-notifyd
     xfce.thunar
+    feh
     ruby # for a quick irb shell
   ];
 }
