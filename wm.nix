@@ -13,11 +13,6 @@
 
   xsession.enable = true;
 
-  xsession.pointerCursor = {
-    package = pkgs.capitaine-cursors;
-    name = "capitaine-cursors";
-    size = 36;
-  };
 
   fonts.fontconfig.enable = true;
 

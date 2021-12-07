@@ -11,7 +11,6 @@
     config = {
       "bar/main" = {
         width = "100%";
-        height = 50;
         "offset-x" = 0;
         "offset-y" = -1;
 
@@ -27,13 +26,6 @@
         module-margin-left = 0;
         module-margin-right = 3;
 
-        font-0 = "DejaVu Sans:size=14;0";
-        font-1 = "Font Awesome 5 Free Regular:size=14;0:style=Solid";
-        font-2 = "Font Awesome 5 Free Solid:size=14;0:style=Solid";
-        font-3 = "Font Awesome 5 Brands Regular:size=14;0:style=Solid";
-        font-4 = "Weather Icons:size=18;0";
-        font-5 = "Material Icons:size=14;2";
-
         tray-position = "right";
         tray-padding = 2;
         tray-background = "#1f1f1f";
@@ -41,7 +33,6 @@
 
         modules-left = "i3";
         modules-center = "weather docn_stonk";
-        modules-right = "power_now backlight battery cpuhz cpu volume whoami date";
       };
 
       "module/i3" = {
