@@ -36,7 +36,7 @@
 
         tray-position = "right";
         tray-padding = 2;
-        tray-background = "#da222222";
+        tray-background = "#1f1f1f";
         tray-offset-y=1;
 
         modules-left = "i3";
