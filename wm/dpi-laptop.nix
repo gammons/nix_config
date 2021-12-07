@@ -23,7 +23,7 @@
         font-5 = "Material Icons:size=14;2";
 
         modules-right = "power_now backlight battery cpuhz cpu volume whoami date";
-      }
-    }
-  }
+      };
+    };
+  };
 }
