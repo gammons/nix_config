@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+require "json"
+
+class Employee
+  attr_accessor :full_name, :title, :team, :manager_id, :id
+end
+
+class Company
+  attr_accessor :employees
+
+  def load_from_file
+    @employees = []
+    json = JSON.parse(File.read("#{__dir__}/data.json"))
+    json["data"].each do |member|
+      e = Employee.new
+      e.id = member["id"]
+      e.manager_id = member["manager"]["id"] if member["manager"]
+      e.full_name = member["full_name"]
+      e.title = member["title"]
+      e.team = member["team_name"]
+      @employees << e
+    end
+  end
+
+  def management_chain(employee, chain = [])
+    return nil if employee.nil?
+
+    chain << employee
+    manager = find_manager(employee)
+
+    return chain if manager.nil?
+
+    management_chain(manager, chain)
+    chain
+  end
+
+  def find_manager(employee)
+    @employees.find {|e| e.id == employee.manager_id }
+  end
+
+  def find_employees(string)
+    @employees.select {|e| e.full_name.downcase.include?(string.downcase) }
+  end
+
+  def print_hierarchy(emps)
+    emps.reverse.each_with_index do |e,i|
+      i.times { print " " }
+      print "∟" if i > 0
+      print "#{e.full_name} - #{e.title} - #{e.team}\n"
+    end
+    print "\n"
+  end
+end
+
+c = Company.new
+c.load_from_file
+results = c.find_employees(ARGV[0])
+
+results.each {|r| c.print_hierarchy(c.management_chain(r)) }
