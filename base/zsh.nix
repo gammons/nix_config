@@ -21,6 +21,8 @@
       pull = "git fetch && git rebase";
 
       l = "exa --long --header -a -s modified";
+
+      ns = "nix search --extra-experimental-features flakes nixpkg";
     };
 
     envExtra = ''
