@@ -16,7 +16,7 @@ index a0c8504..112f96d 100644
  	return value;
  }
  
-+static int multiplier=4;
++static int multiplier=3;
 +
  LIBINPUT_EXPORT double
  libinput_event_pointer_get_axis_value_discrete(struct libinput_event_pointer *event,
