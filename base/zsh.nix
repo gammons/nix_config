@@ -22,7 +22,7 @@
 
       l = "exa --long --header -a -s modified";
 
-      ns = "nix search --extra-experimental-features flakes nixpkg";
+      ns = "nix search --extra-experimental-features flakes nixpkgs";
     };
 
     envExtra = ''
