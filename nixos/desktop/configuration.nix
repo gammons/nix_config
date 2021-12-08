@@ -137,6 +137,12 @@
     })
   ];
 
+  nix = {
+    extraOptions = ''
+      experimental-features = nix-command
+      '';
+  };
+
   system.stateVersion = "21.11";
 }
 
