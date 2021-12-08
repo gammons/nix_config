@@ -45,14 +45,22 @@
   # X11
   ####################################
 
-  programs.sway.enable = true;
-
   services.xserver = {
     enable = true;
+
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 35;
+
     videoDrivers = [ "amdgpu" ];
+
+    windowManager.i3.enable = true;
+
     displayManager = {
-      defaultSession = "sway";
-      startx.enable = true;
+      defaultSession = "none+i3";
+      gdm = {
+        enable = true;
+        wayland = false;
+      };
     };
 
     libinput = {
