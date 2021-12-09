@@ -1,7 +1,7 @@
 {
   programs.tmux = {
     enable = true;
-    terminal = "tmux-256color";
+    terminal = "xterm-256color";
     keyMode = "vi";
     baseIndex = 1;
     historyLimit = 10000;
