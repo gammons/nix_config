@@ -7,7 +7,7 @@
   xsession.pointerCursor = {
     package = pkgs.capitaine-cursors;
     name = "capitaine-cursors";
-    size = 36;
+    size = 48;
   };
 
   services.polybar = {
