@@ -87,9 +87,13 @@ in {
       for_window [title="dropdown-terminal"] move position center
       for_window [title="dropdown-terminal"] move scratchpad
 
-      exec --no-startup-id xautolock -time 90 -locker "systemctl suspend" -corners "--00"
       exec --no-startup-id ${term} --title=dropdown-terminal
       exec --no-startup-id feh --bg-scale ~/.config/nixpkgs/wm/wallpapers
+
+      exec --no-startup-id sleep 1; xset dpms 0 600 0
+      exec --no-startup-id sleep 1; xset s 300
+      exec --no-startup-id xss-lock ~/.config/nixpkgs/wm/lockers/lock.sh
+
       exec --no-startup-id i3-msg workspace 1
     '';
   };
