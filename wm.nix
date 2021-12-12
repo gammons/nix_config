@@ -6,13 +6,11 @@
     ./wm/polybar.nix
     ./wm/kitty.nix
     ./wm/rofi.nix
-    ./wm/xscreensaver.nix
     ./wm/redshift.nix
     ./wm/dpi.nix
   ];
 
   xsession.enable = true;
-
 
   fonts.fontconfig.enable = true;
 
@@ -49,6 +47,8 @@
     xfce.xfce4-notifyd
     xfce.thunar
     feh
+    xss-lock
+    i3lock-fancy-rapid
     ruby # for a quick irb shell
   ];
 }
