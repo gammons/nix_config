@@ -25,5 +25,6 @@
     unzip
     direnv
     stdenv
+    kubectl
   ];
 }
