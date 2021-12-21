@@ -7,6 +7,7 @@
     ./base/tmux.nix
     ./base/starship.nix
     ./base/zsh.nix
+    #./wm/kitty.nix
   ];
 
   home.packages = with pkgs; [
@@ -14,7 +15,6 @@
     curl
     wget
     tig
-    sudo
     htop
     ag
     fd
@@ -25,5 +25,8 @@
     unzip
     direnv
     stdenv
+
+    alacritty
+    nerdfonts
   ];
 }
