@@ -22,6 +22,7 @@
     obsidian
     pavucontrol
     jdk11
+    zoom-us
 
     # tooling
     git
