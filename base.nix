@@ -26,5 +26,7 @@
     direnv
     stdenv
     kubectl
+    k9s
+    kubernetes-helm
   ];
 }
