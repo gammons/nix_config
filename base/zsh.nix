@@ -23,7 +23,7 @@
       l = "exa --long --header -a -s modified";
 
       ns = "nix search --extra-experimental-features flakes --extra-experimental-features nix-command nixpkgs";
-      searchpkgs = "nix-env -qP --available"
+      searchpkgs = "nix-env -qP --available";
 
       kc = "kubectl";
     };
