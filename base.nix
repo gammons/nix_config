@@ -7,6 +7,7 @@
     ./base/tmux.nix
     ./base/starship.nix
     ./base/zsh.nix
+    ./base/dev.nix
   ];
 
   home.packages = with pkgs; [
@@ -25,8 +26,5 @@
     unzip
     direnv
     stdenv
-    kubectl
-    k9s
-    kubernetes-helm
   ];
 }
