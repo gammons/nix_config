@@ -50,6 +50,7 @@
     feh
     xss-lock
     i3lock-fancy-rapid
+    v4l-utils
     ruby # for a quick irb shell
   ];
 }
