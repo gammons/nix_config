@@ -1,5 +1,5 @@
-echo - | awk "{printf \" %.1fW\", \
+echo - | /run/current-system/sw/bin/awk "{printf \" %.1fW\", \
 $(( \
-  $(cat /sys/class/power_supply/BAT0/current_now) * \
-  $(cat /sys/class/power_supply/BAT0/voltage_now) \
+  $(/run/current-system/sw/bin/cat /sys/class/power_supply/BAT0/current_now) * \
+  $(/run/current-system/sw/bin/cat /sys/class/power_supply/BAT0/voltage_now) \
  )) / 1000000000000 }"
