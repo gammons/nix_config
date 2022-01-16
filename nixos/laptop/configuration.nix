@@ -46,20 +46,13 @@
   # X11
   ####################################
 
+  programs.sway.enable = true;
+
   services.xserver = {
     enable = true;
-
-    dpi = 150;
-
-    autoRepeatDelay = 200;
-    autoRepeatInterval = 35;
-
     displayManager = {
-      defaultSession = "none+i3";
-      gdm = {
-        enable = true;
-        wayland = false;
-      };
+      defaultSession = "sway";
+      startx.enable = true;
     };
 
     libinput = {
@@ -72,8 +65,6 @@
         clickMethod = "clickfinger";
       };
     };
-
-    windowManager.i3.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -117,10 +108,6 @@
   # Accelerated video playback
   ####################################
 
-  nixpkgs.config.packageOverrides = pkgs: {
-    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-  };
-
   hardware.opengl = {
     enable = true;
     driSupport = true;
@@ -131,6 +118,10 @@
       vaapiVdpau
       libvdpau-va-gl
     ];
+  };
+
+  nixpkgs.config.packageOverrides = pkgs: {
+    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
   };
 
   ####################################

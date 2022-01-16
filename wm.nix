@@ -18,11 +18,6 @@
     zoom-us
     ruby # for a quick irb shell
 
-    # tooling
-    git
-    curl
-    wget
-
     # fonts
     font-manager
     roboto-mono

@@ -45,6 +45,7 @@
   # X11
   ####################################
 
+<<<<<<< HEAD
   services.xserver = {
     enable = true;
 
@@ -61,6 +62,16 @@
         enable = true;
         wayland = false;
       };
+=======
+  programs.sway.enable = true;
+
+  services.xserver = {
+    enable = true;
+    videoDrivers = [ "amdgpu" ];
+    displayManager = {
+      defaultSession = "sway";
+      startx.enable = true;
+>>>>>>> main
     };
 
     libinput = {
@@ -137,12 +148,15 @@
     })
   ];
 
+<<<<<<< HEAD
   nix = {
     extraOptions = ''
       experimental-features = nix-command
       '';
   };
 
+=======
+>>>>>>> main
   system.stateVersion = "21.11";
 }
 

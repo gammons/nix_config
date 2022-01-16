@@ -18,3 +18,16 @@ Then in user dir...
 cp -R config/* ~/.config/
 home-manager switch
 ```
+
+## Sway TODO
+
+- [x] monitor resolution on laptop
+- [x] figure out better touchpad scrolling
+- [x] bar
+- [x] tray icons
+- [ ] idle
+- [ ] screensaver
+- [ ] gammastep
+
+- [ ] waybar weather
+- [ ] waybar whoami
