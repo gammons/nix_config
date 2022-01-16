@@ -46,13 +46,15 @@
   # X11
   ####################################
 
-  programs.sway.enable = true;
 
   services.xserver = {
     enable = true;
+
+    windowManager.i3.enable = true;
+
     displayManager = {
-      defaultSession = "sway";
-      startx.enable = true;
+      defaultSession = "none+i3";
+      gdm.enable = true;
     };
 
     libinput = {
