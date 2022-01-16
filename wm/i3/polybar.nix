@@ -171,32 +171,32 @@
       "module/cpuload" = {
         type = "custom/script";
         interval = 5;
-        exec = "~/.config/nixpkgs/wm/polybar/cpuload.sh";
+        exec = "~/.config/nixpkgs/wm/i3/polybar/cpuload.sh";
       };
 
       "module/power_now" = {
         type = "custom/script";
         interval = 5;
-        exec = "~/.config/nixpkgs/wm/polybar/power_now";
+        exec = "~/.config/nixpkgs/wm/i3/polybar/power_now";
       };
 
       "module/docn_stonk" = {
         type = "custom/script";
         interval = 300;
-        exec = "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/polybar/stonks.rb DOCN";
+        exec = "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/i3/polybar/stonks.rb DOCN";
       };
 
       "module/cpuhz" = {
         type = "custom/script";
         interval = 5;
-        exec = "~/.config/nixpkgs/wm/polybar/cpupower.sh";
+        exec = "~/.config/nixpkgs/wm/i3/polybar/cpupower.sh";
       };
 
       "module/weather" = {
         type = "custom/script";
         label = "%{T3}%output%";
         interval = 200;
-        exec = "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/polybar/polyweather.rb";
+        exec = "~/.nix-profile/bin/ruby ~/.config/nixpkgs/wm/i3/polybar/polyweather.rb";
       };
 
       "module/whoami" = {
