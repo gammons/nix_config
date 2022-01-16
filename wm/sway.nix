@@ -2,9 +2,122 @@
 let
   mod = "Mod1";
   term = "kitty";
-  lockCmd = "~/.config/nixpkgs/wm/swaylock/lock.sh";
-  sleepCmd = "~/.config/nixpkgs/wm/swaylock/sleep.sh";
+  lockCmd = "~/.config/nixpkgs/wm/sway/swaylock/lock.sh";
+  sleepCmd = "~/.config/nixpkgs/wm/sway/swaylock/sleep.sh";
+
+  googleChromeOzone = pkgs.makeDesktopItem {
+    name = "Chrome";
+    desktopName = "Google Chrome (Ozone Support)";
+    exec = "${pkgs.google-chrome}/bin/google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland";
+  };
+  obsidianOzone = pkgs.makeDesktopItem {
+    name = "ObsidianOzone";
+    desktopName = "Obsidian (Ozone Support)";
+    exec = "${pkgs.obsidian}/bin/obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland --disable-gpu";
+  };
+  slackOzone = pkgs.makeDesktopItem {
+    name = "SlackOzone";
+    desktopName = "Slack (Ozone Support)";
+    exec = "${pkgs.slack}/bin/slack --enable-features=UseOzonePlatform --ozone-platform=wayland";
+  };
 in {
+
+  imports = [
+    ./sway/sway.nix
+    ./sway/kitty.nix
+    ./sway/mako.nix
+  ];
+
+  fonts.fontconfig.enable = true;
+
+  systemd.user.targets.sway-session = {
+    Unit = {
+      Description = "sway compositor session";
+      Documentation = [ "man:systemd.special(7)" ];
+      BindsTo = [ "graphical-session.target" ];
+      Wants = [ "graphical-session-pre.target" ];
+      After = [ "graphical-session-pre.target" ];
+    };
+  };
+
+  systemd.user.services.mako = {
+    Unit.PartOf = [ "sway-session.target" ];
+    Install.WantedBy = [ "sway-session.target" ];
+
+    Service = {
+      ExecStart = "${pkgs.mako}/bin/mako";
+      Restart = "on-failure";
+    };
+  };
+
+  services.gammastep = {
+    enable = true;
+    latitude = "40.06";
+    longitude = "-75.30";
+    temperature = {
+      day = 6500;
+      night = 3500;
+    };
+  };
+
+  home.keyboard = {
+    layout = "us, us";
+    options = [
+      "caps:ctrl_modifier"
+    ];
+  };
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    TERM = "xterm-256color";
+  };
+
+  lib.sytemd.user = {
+    startServices = true;
+
+    services = {
+      setxkbmap.Service.ExecStart = pkgs.lib.mkForce "${pkgs.coreutils}/bin/true";
+    };
+  };
+
+  home.sessionVariables = {
+    WLR_DRM_NO_MODIFIERS= 1;
+    WLR_NO_HARDWARE_CURSORS = 1;
+    GDK_BACKEND = "wayland";
+    GDK_DPI_SCALE = 1;
+    MOZ_ENABLE_WAYLAND = 1;
+    QT_QPA_PLATFORM = "wayland-egl";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
+    SDL_VIDEODRIVER = "wayland";
+    _JAVA_AWT_WM_NONREPARENTING = 1;
+  };
+
+  home.packages = with pkgs; [
+    # applications
+    slackOzone
+    googleChromeOzone
+    obsidianOzone
+
+    # sway things
+    waybar
+    swayidle
+    wl-clipboard
+    wofi
+    wdisplays
+    swaylock-effects
+    grim
+    slurp
+
+    # themes
+    gnome-themes-standard
+    gnome3.adwaita-icon-theme
+
+    gtk-engine-murrine
+    gtk_engines
+    gsettings-desktop-schemas
+    lxappearance
+  ];
+
   wayland.windowManager.sway = {
     enable = true;
     package = pkgs.i3-gaps;

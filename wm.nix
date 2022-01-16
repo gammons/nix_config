@@ -89,26 +89,9 @@ in {
 
   home.packages = with pkgs; [
     # applications
-    slack
     slackOzone
-
-    google-chrome
     googleChromeOzone
-
-    obsidian
     obsidianOzone
-
-    spotify
-    pavucontrol
-    jdk11
-
-    # fonts
-    font-manager
-    roboto-mono
-    font-awesome-ttf
-    material-icons
-    weather-icons
-    nerdfonts
 
     # sway things
     waybar
@@ -128,13 +111,5 @@ in {
     gtk_engines
     gsettings-desktop-schemas
     lxappearance
-
-    # desktop env things
-    playerctl
-    keychain
-    brightnessctl
-    gammastep
-    xfce.thunar
-    ruby # for a quick irb shell
   ];
 }
