@@ -1,2 +1,3 @@
-wm/dpi.nix
+wm/i3/dpi.nix
+wm/wm-of-choice.nix
 bin/data.json

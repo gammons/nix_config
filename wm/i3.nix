@@ -3,6 +3,14 @@ let
   mod = "Mod1";
   term = "kitty";
 in {
+  imports = [
+    ./i3/picom.nix
+    ./i3/polybar.nix
+    ./i3/rofi.nix
+    ./i3/redshift.nix
+    ./i3/dpi.nix
+  ];
+
   xsession.windowManager.i3 = {
     enable = true;
     package = pkgs.i3-gaps;
@@ -97,4 +105,19 @@ in {
       exec --no-startup-id i3-msg workspace 1
     '';
   };
+
+  xsession.enable = true;
+
+  home.packages = with pkgs; [
+    pasystray
+    xautolock
+    flameshot
+    brightnessctl
+    autorandr
+    xfce.xfce4-notifyd
+    xfce.thunar
+    feh
+    xss-lock
+    i3lock-fancy-rapid
+  ];
 }

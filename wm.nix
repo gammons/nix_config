@@ -1,16 +1,9 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./wm/i3.nix
-    ./wm/picom.nix
-    ./wm/polybar.nix
     ./wm/kitty.nix
-    ./wm/rofi.nix
-    ./wm/redshift.nix
-    ./wm/dpi.nix
+    ./wm/wm-of-choice.nix
   ];
-
-  xsession.enable = true;
 
   fonts.fontconfig.enable = true;
 
@@ -23,6 +16,7 @@
     pavucontrol
     jdk11
     zoom-us
+    ruby # for a quick irb shell
 
     # tooling
     git
@@ -40,17 +34,5 @@
     # desktop env things
     playerctl
     keychain
-    pasystray
-    xautolock
-    flameshot
-    brightnessctl
-    autorandr
-    xfce.xfce4-notifyd
-    xfce.thunar
-    feh
-    xss-lock
-    i3lock-fancy-rapid
-    v4l-utils
-    ruby # for a quick irb shell
   ];
 }
