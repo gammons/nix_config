@@ -46,15 +46,20 @@
   # X11
   ####################################
 
+  programs.sway.enable = true;
 
   services.xserver = {
     enable = true;
 
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 35;
+
     windowManager.i3.enable = true;
 
     displayManager = {
-      defaultSession = "none+i3";
-      gdm.enable = true;
+      defaultSession = "sway"; # or "none+i3"
+
+      lightdm.enable = true; # gdm doesn't work with sway for uknown reasons
     };
 
     libinput = {
