@@ -23,8 +23,6 @@ let
 in {
 
   imports = [
-    ./sway/sway.nix
-    ./sway/kitty.nix
     ./sway/mako.nix
   ];
 
@@ -204,7 +202,7 @@ in {
           always = true;
         }
         {
-          command = "waybar -c ~/.config/nixpkgs/wm/waybar/config -s ~/.config/nixpkgs/wm/waybar/style.css";
+          command = "waybar -c ~/.config/nixpkgs/wm/sway/waybar/config -s ~/.config/nixpkgs/wm/sway/waybar/style.css";
           always = true;
         }
         {
