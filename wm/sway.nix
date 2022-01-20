@@ -10,6 +10,11 @@ let
     desktopName = "Google Chrome (Ozone Support)";
     exec = "${pkgs.google-chrome}/bin/google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland";
   };
+  chromiumOzone = pkgs.makeDesktopItem {
+    name = "Chromium";
+    desktopName = "Chromium (Ozone Support)";
+    exec = "${pkgs.chromium}/bin/chromium --enable-features=UseOzonePlatform --ozone-platform=wayland";
+  };
   obsidianOzone = pkgs.makeDesktopItem {
     name = "ObsidianOzone";
     desktopName = "Obsidian (Ozone Support)";
@@ -94,6 +99,7 @@ in {
     # applications
     slackOzone
     googleChromeOzone
+    chromiumOzone
     obsidianOzone
 
     # sway things
