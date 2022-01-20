@@ -6,6 +6,7 @@
     kubectl
     k9s
     kubernetes-helm
+    docker
     docker-compose
     openssl
     zlib

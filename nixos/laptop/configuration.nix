@@ -89,12 +89,12 @@
 
   users.users.grant = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "docker" ];
     shell = pkgs.zsh;
   };
   users.users."grant-work" = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "docker" ];
     shell = pkgs.zsh;
   };
 
@@ -110,6 +110,8 @@
     git
     vim
   ];
+
+  virtualisation.docker.enable = true;
 
   ####################################
   # Accelerated video playback
