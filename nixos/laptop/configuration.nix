@@ -46,7 +46,7 @@
   # X11
   ####################################
 
-  programs.sway.enable = true;
+  #programs.sway.enable = true;
 
   services.xserver = {
     enable = true;
@@ -57,9 +57,9 @@
     windowManager.i3.enable = true;
 
     displayManager = {
-      defaultSession = "sway"; # or "none+i3"
+      defaultSession = "none+i3"; # or "sway"
 
-      lightdm.enable = true; # gdm doesn't work with sway for uknown reasons
+      gdm.enable = true; # gdm doesn't work with sway for uknown reasons
     };
 
     libinput = {
