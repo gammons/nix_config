@@ -1,7 +1,7 @@
 {
   programs.git = {
     enable = true;
-    userEmail = "gammons@gmail.com";
+    userEmail = "grant@grant.dev";
     userName = "Grant Ammons";
     aliases = {
       fuckit = "!git clean -d -f && git reset --hard";

@@ -15,7 +15,6 @@
     curl
     wget
     tig
-    sudo
     htop
     ag
     fd
@@ -26,5 +25,6 @@
     unzip
     direnv
     stdenv
+    keychain
   ];
 }

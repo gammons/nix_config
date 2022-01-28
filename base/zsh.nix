@@ -30,6 +30,8 @@
 
     envExtra = ''
       PATH=$HOME/.config/nixpkgs/bin:$PATH
+      PATH=$HOME/.nix-profile/bin:$PATH
+      PATH=$HOME/bin:$PATH
       eval $(keychain --eval --quiet id_rsa)
       eval "$(direnv hook zsh)"
       . $HOME/.asdf/asdf.sh

@@ -3,7 +3,8 @@
 {
   imports = [
     ./base.nix
-    ./wm.nix
+    #./wm/kitty.nix
+    #./wm.nix
   ];
 
   # Let Home Manager install and manage itself.
@@ -12,7 +13,7 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "grant";
-  home.homeDirectory = "/home/grant";
+  home.homeDirectory = "/Users/grantammons";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
